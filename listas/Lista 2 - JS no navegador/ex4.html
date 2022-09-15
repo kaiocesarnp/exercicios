@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 04</title>
+</head>
+<body>
+        <h1>Exercício 04</h1>
+        <h2>
+            Crie uma página HTML contendo um div e um botão. Faça com que, cada vez que 
+            o botão for clicado, um novo parágrafo seja adicionado contendo o mesmo texto.
+        </h2>
+        
+        <p>Bloco de Elementos:</p>
+        <div id="tag" style="border: 0.5px solid black">&nbsp;</div>
+        <button onclick="adiciona()">Adiciona</button>
+</body>
+
+<script>
+        function adiciona(){
+            let newtxt = document.createElement('p');
+            newtxt.innerText = "Novo parágrafo com o mesmo texto!";
+            
+
+            let dive = document.querySelector('#tag');
+            dive.appendChild(newtxt);
+        }
+
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+
+    <h2>
+        Modifique o código anterior para que cada novo texto adicionado seja diferente (Os possíveis 
+        textos podem vir, por exemplo, de um array, em que a cada clique é lido o próximo elemento do array).
+    </h2>
+        <p>Bloco de Elementos:</p>
+        <div id="tag" style="border: 0.5px solid black">&nbsp;</div>
+        <button onclick="adiciona()">Adiciona</button>
+        
+        <script>
+
+            let i = 0;
+
+            let a = ["kaio", "cleiton", "nicholas"]
+                function adiciona(){
+                    let newtxt = document.createElement('p');
+                    newtxt.innerText = a[i++]
+
+                    if (i > a.length - 1){
+                        i =0;
+                    }
+ 
+                    let dive = document.querySelector('#tag');
+                    dive.appendChild(newtxt);
+        
+                }
+        
+        
+    </script>
+    
+</body>
+</html>

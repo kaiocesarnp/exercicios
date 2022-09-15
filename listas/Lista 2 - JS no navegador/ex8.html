@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 08</title>
+</head>
+<body>
+     <h1>Exercício 08</h1>
+        <h2>
+            Crie uma nova página contendo um campo de texto e um outro 
+            elemento de conteúdo qualquer (por exemplo, uma tag < h1 >). 
+            À medida que o usuário digitar qualquer conteúdo na caixa de texto, esse mesmo conteúdo 
+            deve ser replicado em tempo real no outro elemento (utilize o evento onkeydown).
+        </h2>
+
+        <input type="text" id="lista" onkeydown="teste()">
+        <div id="status"></div>
+        <script>
+            function teste(){
+                let input = document. querySelector("#lista");
+                document.getElementById("status").innerText = input.value;
+             
+            }
+            
+        </script>
+    
+    </body>
+</html>

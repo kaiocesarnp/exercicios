@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 02</title>
+</head>
+<body>
+        <h1>Exercício 02</h1>
+        <h2>
+        Crie uma página HTML simples com vários parágrafos (tags < p >, alguns dos quais pertençam à classe CSS 'importante'). 
+        Crie dois botões: um que, ao ser clicado, mude o texto do todos os parágrafos. 
+        Outro, que mude apenas o texto dos parágrafos pertencentes à classe 'importante' (com uma única instrução JavaScript para cada botão).
+        </h2>
+
+        <p class="importante">Assim como o BMX, o mountain bike nasceu da curiosidade.</p>
+        <p class="importante">É um esporte específico de montanha e trilhas.</p>
+        <p>Surgiu na década de 70 na Califórnia, a partir da atividade de um grupo de amigos.</p>
+
+        <button onclick ="fazAlgo()">Vai!</button>
+        <button onclick ="FaçaAlgo()">Voa!</button>
+
+        <script>
+                function fazAlgo(){
+                    let bot = document.querySelectorAll('p')
+                    for (let i in bot){
+                    bot[i].innerText = 'Olá!'
+                }               
+                }
+
+                function FaçaAlgo(){
+                    let bot = document.querySelectorAll('.importante')
+                    for (let i in bot){
+                    bot[i].innerText = 'Olé!'
+                }               
+                }
+
+        </script>
+
+    
+</body>
+</html>

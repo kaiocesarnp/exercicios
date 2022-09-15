@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Exercício 07</title>
+</head>
+    <body>
+            <h1>Exercício 07</h1>
+
+            <h3>
+                Acrescente uma caixa de texto à página das questões anteriores e um botão que,
+                ao ser clicado, adicione um parágrafo contendo o texto digitado.
+            </h3>
+
+            <h2>Bloco de Elementos:</h2>
+            <div id="tag" style="border: 0.5px solid black">&nbsp;</div>
+            <button onclick="adiciona()">Adiciona</button>
+            <button onclick="remove1()">Remove</button>
+            <input type="text" id="entrada">
+            <button onclick="novotext()">Novo Texto</button>
+            
+            <script>
+    
+                let i = 0;
+    
+                let a = ["kaio", "cleiton", "nicholas"]
+                    function adiciona(){
+                        let newtxt = document.createElement('p');
+                        newtxt.innerText = a[i++]
+    
+                        if (i > a.length - 1){
+                            i =0;
+                        }
+     
+                        let dive = document.querySelector('#tag');
+                        dive.appendChild(newtxt);
+                    }
+                    function remove1() {
+                        let newtx = document.querySelector('p');
+                        newtx.remove();
+                         }
+
+                    function novotext() {
+                        let newtx7 = document.querySelector('#entrada').value;
+                        let h = document.createElement('p');
+                        h.innerHTML = newtx7;
+
+                        let texty = document.querySelector('#tag');
+                        texty.appendChild(h);
+                        
+                         }
+                    
+            
+        </script>
+
+
+    </body>
+    </html>

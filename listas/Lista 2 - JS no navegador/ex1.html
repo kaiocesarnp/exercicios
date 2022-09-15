@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula de JavaScript</title>
+</head>
+<body>
+    <h1>Exercício 01</h1>
+
+    <h2>
+        Crie uma página HTML simples, que contenha em algum lugar um elemento 
+        (div, span ou p) com id="texto". Crie um botão que, ao ser clicado,
+         mude o texto deste elemento.
+    </h2>
+
+    <p id="texto">Primeiro parágrafo</p>
+    <button onclick ="fazAlgo()">Vai!</button>
+
+    <script>
+            function fazAlgo(){
+                let a = document.querySelector('p');
+                a.innerText = 'Olá!'
+            }
+    
+    </script>
+
+</body>
+</html>

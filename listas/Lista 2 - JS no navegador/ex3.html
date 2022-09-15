@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 03</title>
+</head>
+<body>
+        <h1>Exercício 03</h1>
+
+        <h2>
+            Crie um elemento HTML cujo texto seja modificado quando o cursor do mouse
+            está sobre ele e volte ao texto original quando o cursor não estiver mais.
+        </h2>
+
+        <p onmousemove ="fazAlgo()" onmouseout ="façaAlgo()">O IFB, é uma instituição de ensino pública brasileira.</p>
+
+        <script>
+                function fazAlgo(){
+                    let a = document.querySelector('p');
+                    a.innerHTML = `Sendo parte da Rede Federal de Educação Profissional, Científica e Tecnológica.`
+                }
+
+                function façaAlgo(){
+                    let a = document.querySelector('p');
+                    a.innerHTML = `O IFB, é uma instituição de ensino pública brasileira.`
+                }
+        
+        </script>
+    
+</body>
+
+</html>

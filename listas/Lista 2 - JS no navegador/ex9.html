@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Exercício 09</title>
+</head>
+    <body>
+        <h1>Exercício 09</h1>
+
+        <h2>
+            Crie uma página contendo um grupo de checkboxes e um grupo 
+            de elementos radio. Faça com que algum elemento da tela seja 
+            modificado a cada clique em um dos elementos, de acordo com 
+            a opção (radio) ou opções (checkbox) selecionadas.
+        </h2>
+        
+        <!-- <p>
+            Caixa de Texto: <input type="text" id="txt">
+        </p> -->
+
+        <p class="batata">
+            Checkboxes<br>
+            <label> <input onclick="vai()" type="checkbox" id="ch1"> Checkbox 1 <br></label>
+        </p>
+
+        <p class="atatab">
+            Radio:<br>
+            <label > <input onclick="ir()" name="ops" type="radio" id="op1"> Opção 1</label>
+            <label> <input onclick="ir()" name="ops" type="radio" id="op2"> Opção 2</label>
+        </p>
+
+        <script>
+                function vai(){
+                    let resultado = document.querySelector('#ch1').checked;
+                    if(resultado){
+                        let r = document.createElement('p');
+                        r.innerText = 'selecionado';
+                        let x = document.querySelector('.batata');
+                        x.appendChild(r);
+                    }else{
+                        let r = document.createElement('p');
+                        r.innerText = 'não selecionado';
+                        let x = document.querySelector('.batata');
+                        x.appendChild(r);
+                    } 
+                }
+
+                function ir(){
+                    let resultado = document.querySelector('#op1').checked;
+                    if(resultado){
+                        let r = document.createElement('p');
+                        r.innerText = '1º selecionado';
+                        let x = document.querySelector('.atatab');
+                        x.appendChild(r);
+                    }else{
+                        let r = document.createElement('p');
+                        r.innerText = '2º selecionado';
+                        let x = document.querySelector('.atatab');
+                        x.appendChild(r);
+                    } 
+                }
+
+
+
+        </script>
+
+        
+    </body>
+    </html>
