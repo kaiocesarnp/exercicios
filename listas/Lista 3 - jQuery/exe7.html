@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+</head>
+<body>
+    <h1>Exercício 07</h1>
+    <h2>
+        Crie uma página com vários parágrafos e faça com que cada parágrafo 
+        despareça ao ser clicado. Adicione um botão à página. Quando esse botão 
+        for clicado, todos os parágrafos devem aparecer novamente.
+    </h2>
+
+    <p id="um" onclick="some(event)">Instituto Federal de Brasília.</p>
+    <p id="dois" onclick="some(event)">Campus Asa Norte.</p>
+    <p id="tres" onclick="some(event)">Técnico em Desenvolvimento de Sistemas.</p>
+    <p id="quatro" onclick="some(event)">Turno: Vespertino.</p>
+
+    <button onclick="volta()">Aparecer</button>
+</body>
+
+    <script>
+        function some(i){
+            console.log($(i.target).hide());
+        }
+
+        function volta(){
+            console.log($('p').show());
+        }
+    
+    </script>
+
+<script src= "https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+</html>

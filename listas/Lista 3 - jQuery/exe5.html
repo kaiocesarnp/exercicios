@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+    <h2>
+    Crie um elemento de texto que mude de cor quando o cursor do mouse passa por cima dele.
+    </h2>
+    
+    <p onmouseover ="mudar()">Este texto muda de cor quando o mouse passa por ele.</p>
+    <style>
+        .mudar{
+            border: 1px;
+            background-color: green;
+            width: 350px
+        } 
+    </style>   
+</body>
+
+<script>
+    function mudar(){
+        $('p').toggleClass('mudar');
+    }
+
+</script>
+
+<script src= "https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+</html>

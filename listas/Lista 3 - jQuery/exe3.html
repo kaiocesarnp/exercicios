@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+</head>
+<body>
+    <h1>Exercício 03</h1>
+    <h2>
+        Refaça os exercícios 1, 2 e 3 da lista anterior utilizando seletores JQuery. <br>
+        3 - Crie um elemento HTML cujo texto seja modificado quando o cursor do mouse 
+        está sobre ele e volte ao texto original quando o cursor não estiver mais.
+    </h2>
+        <p id = "um" onmousemove ="fazAlgo()" onmouseout ="façaAlgo()">O IFB, é uma instituição de ensino pública brasileira.</p>
+
+        <script>
+                function fazAlgo(){
+                    let z = $('#um');
+                    z.text ('Sendo parte da Rede Federal de Educação Profissional, Científica e Tecnológica.')
+                }
+
+                function façaAlgo(){
+                    let z = $('#um');
+                    z.text ('O IFB, é uma instituição de ensino pública brasileira.')
+                }
+        
+        </script>
+    
+</body>
+
+
+<script src= "https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+</html>

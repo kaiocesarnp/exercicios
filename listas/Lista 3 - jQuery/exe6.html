@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+</head>
+<body>
+    <h1>Exercício 06</h1>
+    <h2>
+        Crie uma página com alguns elementos span. Crie uma nova classe CSS chamada 
+        "destaque" com algumas propriedades visuais (por exemplo, fonte negrito, 
+        cor de plano de fundo, etc...). Adicione um botão à página que, ao ser clicado, 
+        aplique essa classe a todos os elementos span.
+    </h2>
+
+    <span>Texto! Carro!</span> <br>
+    <span>Bike! Moto!</span> <br> <br>
+
+    <button onclick="destaque()">Clique!</button>
+
+    <style>
+            .destaque{
+                font-weight: bold;
+                font-size: large;
+                border: 1px;
+                background-color: yellow;
+                width: 350px
+            } 
+        </style> 
+    
+</body>
+
+<script>
+        function destaque(){
+            $('span').toggleClass('destaque');
+        }
+    
+    </script>
+
+<script src= "https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+</html>

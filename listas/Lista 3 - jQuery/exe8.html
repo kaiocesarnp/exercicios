@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+</head>
+<body>
+    <h1>Exercício 08</h1>
+    <h2>
+        Acrescente ao código HTML anterior controles para escolher o efeito que 
+        deve acontecer quando um parágrafo for clicado: hide, fade ou slide. 
+        Modifique o código JQuery para refletir a opção selecionada nos eventos.
+    </h2>
+
+    <p id="um" onclick="some1()">Instituto Federal de Brasília.</p>
+    <p id="dois" onclick="some2()">Campus Asa Norte.</p>
+    <p id="tres" onclick="some3()">Técnico em Desenvolvimento de Sistemas.</p>
+
+    <button onclick="volta()">Aparecer</button>
+    
+</body>
+
+    <script>
+        function some1(){
+        $('#um').fadeOut('fast');
+        }
+
+        function some2(){
+        $('#dois').fadeOut('fast');
+        }
+        function some3(){
+        $('#tres').fadeOut('fast');
+        }
+
+        function volta(){
+            $('p').fadeIn(2000)
+        }
+    
+    </script>
+
+<script src= "https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+</html>

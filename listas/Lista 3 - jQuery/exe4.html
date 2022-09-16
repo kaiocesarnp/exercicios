@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery</title>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+
+        <h2>
+        Crie uma página com um parágrafo, dois elementos radio e um botão. 
+        Quando o botão for clicado, o texto do parágrafo deve mudar, 
+        de acordo com qual elemento radio está selecionado.
+        </h2>
+
+    <p>Este é um parágrafo.</p>
+    <input type="radio" name="check" value="computador"> Computador <br>
+    <input type="radio" name="check" value="tela"> Tela <br><br>
+    <button onclick="vai()">Vai!</button>
+    
+    
+</body>
+
+<script src= "https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+<script>
+    function vai(){
+        let marcado = $("input[name='check']:checked").val();
+
+        if(marcado == 'computador'){
+            let z = $('p');
+            z.text ('Computadores pessoais.')
+        } 
+        else if(marcado == 'tela'){
+            let z = $('p');
+            z.text ('Pessoais computadores.')
+        }
+        
+    }
+
+
+</script>
+
+</html>
