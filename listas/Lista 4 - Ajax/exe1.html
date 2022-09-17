@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+
+    <h1>Exercício 01</h1>
+    <h2>
+        Escreva uma página com um div e um botão. Quando o botão for clicado, 
+        o conteúdo da URL http://numbersapi.com/8 deve ser carregado no div.
+    </h2>
+
+    <div id="agora">Texto:</div><br>
+    <button onclick="clicke()">Click</button>
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+function clicke(){
+    $('#agora').load('http://numbersapi.com/8');
+}
+</script>
+
+</html>

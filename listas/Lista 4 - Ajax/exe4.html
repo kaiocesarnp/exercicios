@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+    <h2>
+    Para as duas questões seguintes, use a API documentada em https://reqres.in/ <br>
+    4. Crie uma página com elementos vazios para: <br><br>
+    Email <br>
+    Primeiro nome <br>
+    Último nome <br>
+    Avatar (imagem) <br><br>
+
+    Crie um elemento que permita selecionar um número e um botão. 
+    Ao ser pressionado, o usuário deve buscar os dados do usuário 
+    com aquele id (referência: SINGLE USER) e preencher os campos acima.<br><br>
+    Dica: Para mudar a URL de uma imagem, use o método .attr('src', novaurl).
+    </h2>
+
+    <h3>Email: <span id="email"></span></h3>
+    <h3>Nome: <span id="primeiro"></span></h3>
+    <h3>Ultimo nome: <span id="ultimo"></span></h3>
+    <h3>Avatar(imagem): <img id="avatar" src=""></img></h3>
+    <input type="text" id="numinput">
+    <button onclick="vai()">Clique</button>
+
+    <script>
+        function vai(){
+            let usuario = $('#numinput').val()
+
+        $.ajax({
+            type:'GET',
+            url:'https://reqres.in/api/users/'+usuario,
+            success: function(dados){
+                let email = dados.data.email
+                let prinome = dados.data.first_name
+                let ultnome = dados.data.last_name
+                let avatar = dados.data.avatar
+
+                $("#email").text(email)
+                $("#primeiro").text(prinome)
+                $("#ultimo").text(ultnome)
+                $("#avatar").attr('src',avatar)
+            },
+            error:function(dados){
+                $('h2').text('url não invalido')
+            }
+        })
+
+        }
+
+    </script>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>

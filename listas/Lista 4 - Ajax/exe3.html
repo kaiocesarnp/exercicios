@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1>Exercício 03</h1>
+    <h2>
+    Modifique o código anterior para usar $.ajax(...) ao invés de load(...), 
+    sem alterar o funcionamento da página.
+    </h2>
+
+    <h3>Escolha um número:</h3>
+    <input type="text" id="numbers">
+
+    <button onclick="clicke()">Clique!</button>
+
+    <script>
+        function clicke(){
+            let num = $('#numbers').val()
+            $.ajax({
+                type:'GET',
+                url:'http://numbersapi.com/'+num,
+                success: function(dados){
+                    $('h2').text(dados)
+                },
+                error:function(dados){
+                    $('h2').text('url não invalido')
+                }
+            })
+        }
+    
+    </script>
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>

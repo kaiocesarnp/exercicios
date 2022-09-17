@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+    <h2>
+    Para as duas questões seguintes, use a API documentada em https://reqres.in/ <br><br>
+
+    5. Crie um formulário com campos para nome e profissão e um botão. 
+    Quando o botão for clicado, deve ser enviada uma requisição para 
+    a criação desse usuário (referência: CREATE). Após a criação, 
+    deve ser informado ao usuário o ID do usuário recém-criado, assim 
+    como a confirmação do nome e profissão, tais como recebidos do servidor.
+    </h2>
+
+    <div>
+        <p>Nome: <input type="text" name="nome" id="nome"></p>
+
+        <p>Trabalho: <input type="text" name="trabalho" id="trabalho"></p>
+    </div>
+
+    <div>
+        <p>Nome: <strong id="nm"></strong></p>
+        <p>Trabalho: <strong id="tb"></strong></p>
+    </div>
+    
+    <button onclick="vai()">Enviar</button>
+
+    <script>
+        function vai(){
+            let x = $('#nome').val();
+            let z = $('#trabalho').val();
+
+            $.ajax({
+                type: 'POST',
+                url: 'https://reqres.in/api/users',
+                data: {
+                    name: x,
+                    job: z
+                },
+
+                success: function(dados){
+                    $('#nm').text(dados.name);
+                    $('#tb').text(dados.job);
+                },
+                error: function(dados){
+                    return
+                }
+            })
+        }
+
+
+    </script>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>

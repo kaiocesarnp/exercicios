@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1>Exercício 02</h1>
+    <h2>
+    Acrescente à página anterior um elemento para que o usuário possa 
+    selecionar um número qualquer. Quando o botão for clicado, deve ser 
+    carregado o conteúdo da URL http://numbersapi.com/N, onde N é o número selecionado pelo usuário.
+    </h2>
+
+    <h3>Escolha um número:</h3>
+    <input type="text" id="numbers">
+
+    <button onclick="clicke()">Clique!</button>
+
+    <script>
+        function clicke(){
+            let num = $('#numbers').val()
+            $('h2').load('http://numbersapi.com/'+num)
+        }
+    </script>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>
